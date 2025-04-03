@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script/home.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>STOCK MARKET MANAGEMENT SYSTEM</h1>
+        <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- Stock News Marquee -->
+    <marquee id="stockNews" class="news-bar">Loading latest stock news...</marquee>
+
+    <div class="container">
+        <h2>Live Market Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Market Price</th>
+                    <th>Change</th>
+                    <th>% Change</th>
+                </tr>
+            </thead>
+            <tbody id="stockData">
+                <!-- Stock data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Buy/Sell Section -->
+    <div class="trade-section">
+        <h2>Trade Stocks</h2>
+        <form id="tradeForm">
+            <label for="symbol">Stock Symbol:</label>
+            <input type="text" id="symbol" required>
+
+            <label for="action">Action:</label>
+            <select id="action" required>
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+            </select>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" min="1" required>
+
+            <button type="submit">Submit Trade</button>
+        </form>
+        <p id="tradeMessage"></p>
+    </div>
+
+    <!-- Missing Module: User Dashboard - Current Holdings -->
+    <div class="dashboard-section">
+        <h2>Your Current Holdings</h2>
+        <table id="holdingsTable">
+            <thead>
+                <tr>
+                    <th>Stock Symbol</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Holdings data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Missing Module: User Dashboard - Transaction History -->
+    <div class="dashboard-section">
+        <h2>Transaction History</h2>
+        <table id="transactionsTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock Symbol</th>
+                    <th>Action</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Transaction data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

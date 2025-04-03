@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>STOCK MARKET MANAGEMENT SYSTEM</h1>
+    </div>
+    <div class="form-container">
+        <h2>Register</h2>
+        <form action="/register" method="POST">
+            <div class="form-field">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-field">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-field">
+                <label for="pan">PAN Number:</label>
+                <input type="text" id="pan" name="pan" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" title="PAN should be in the format XXXXX1234X">
+            </div>
+            <div class="form-field">
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" required pattern="^\d{12}$" title="Aadhar number must be 12 digits long">
+            </div>
+            <button type="submit" class="btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="frontend\script\register.js"></script>
+</body>
+</html>
